@@ -1,0 +1,10 @@
+Package: MetaCycData
+Title: MetaCyc data (version 21.1) in R format
+Version: 0.3
+Authors@R: person("Amanda", "White", email = "amanda.white@pnnl.gov", role = c("aut", "cre"))
+Description: A set of data.frames containing parsed MetaCyc data.
+Depends: R (>= 3.3.1)
+License: PNNL internal use only
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
