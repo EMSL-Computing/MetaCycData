@@ -3,9 +3,7 @@
 library(devtools)
 library(dplyr)
 
-# dir.create("D:/files/MinT/fticr_viz/MetaCycData")
-# setwd("D:/files/MinT/fticr_viz/MetaCycData")
-setwd("~/Files/MinT/fticr_viz/MetaCycData")
+setwd("~/Files/MinT/github/MetaCycData")
 
 # only once:
 # setup(rstudio=FALSE)
@@ -13,7 +11,7 @@ setwd("~/Files/MinT/fticr_viz/MetaCycData")
 # Load data from RDS files and save in Data directory
 
 # data.dir <- "D:/Files/MinT/Metacyc biocyc files/meta/data"
-data.dir <- "~/Files/MinT/Data/MetaCyc_21.1/data"
+data.dir <- "/Users/d3l348/tmp/MetaCyc_local_copy/22.6/data"
 
 mc_compounds <- readRDS(file.path(data.dir, "compounds.RDS"))
 use_data(mc_compounds, overwrite=TRUE)
@@ -94,9 +92,9 @@ tmp <- lapply(1:nrow(mc_modules), function(i) {
   .data$MODULE=mc_modules$MODULE[i]
   return(.data)
 })
-saveRDS(tmp, file="../../Data/mc.rxn.module.node.mapping.RDS")
+saveRDS(tmp, file=file.path(data.dir, "mc.rxn.module.node.mapping.RDS"))
 
-con <- file("../../Data/mc.rxn.module.node.mapping.csv", "w")
+con <- file(file.path(data.dir, "mc.rxn.module.node.mapping.csv"), "w")
 cat(colnames(tmp[[1]]), sep=",", file=con)
 cat("\n", file=con)
 for (i in 1:length(tmp)) {
@@ -104,7 +102,7 @@ for (i in 1:length(tmp)) {
 }
 close(con)
 
-mc_reaction_module_node_map <- read.table("../../Data/mc.rxn.module.node.mapping.csv", sep=",", header=TRUE, row.names=NULL)
+mc_reaction_module_node_map <- read.table(file.path(data.dir, "mc.rxn.module.node.mapping.csv"), sep=",", header=TRUE, row.names=NULL)
 mc_reaction_module_node_map <- unique(mc_reaction_module_node_map)
 
 # make sure all reactions map to mc_reactions$REACTION
