@@ -111,6 +111,12 @@ all(mc_reaction_module_node_map$REACTION %in% mc_reactions$REACTION)
 use_data(mc_reaction_module_node_map, overwrite=TRUE)
 
 
+## Get MetaCyc release number from version.dat file
+version_info <- read.table(file.path(data.dir, "version.dat"), sep="\t", comment.char=";", row.names = 1)
+
+message(sprintf("TODO: open DESCRIPTION file and increment version number and incorporate MetaCyc release info into title and description field: (Version %s, Released %s)", version_info["VERSION",1], version_info["RELEASE-DATE", 1]))
+
+
 document()
 # build()
 install()
