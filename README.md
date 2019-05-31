@@ -1,3 +1,3 @@
 # MetaCycData
 
-Current version is 22.6, pulled from MetaCyc on 2/1/19
+Current version is 23.0, pulled from MetaCyc on May 30, 2019.

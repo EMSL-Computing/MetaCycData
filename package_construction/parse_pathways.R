@@ -1,7 +1,7 @@
 # Parse MetaCyc pathways.dat file
 library(dplyr)
 
-data.dir <- "/Users/d3l348/tmp/MetaCyc_local_copy/22.6/data"
+data.dir <- "/Users/d3l348/tmp/meta-23.0/data"
 fname <- file.path(data.dir, "pathways.dat")
 
 # Find the starts of fields (i.e. all caps title at beginning of line)

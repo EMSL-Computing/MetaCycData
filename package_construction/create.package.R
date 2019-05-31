@@ -11,7 +11,7 @@ setwd("~/Files/MinT/github/MetaCycData")
 # Load data from RDS files and save in Data directory
 
 # data.dir <- "D:/Files/MinT/Metacyc biocyc files/meta/data"
-data.dir <- "/Users/d3l348/tmp/MetaCyc_local_copy/22.6/data"
+data.dir <- "/Users/d3l348/tmp/meta-23.0/data"
 
 mc_compounds <- readRDS(file.path(data.dir, "compounds.RDS"))
 use_data(mc_compounds, overwrite=TRUE)

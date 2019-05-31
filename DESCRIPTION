@@ -1,10 +1,10 @@
 Package: MetaCycData
-Title: MetaCyc data (version 22.6) in R format
-Version: 0.4
+Title: MetaCyc data (version 23.0) in R format
+Version: 0.5
 Authors@R: person("Amanda", "White", email = "amanda.white@pnnl.gov", role = c("aut", "cre"))
-Description: A set of data.frames containing parsed MetaCyc data. MetaCyc version 22.6, released Dec 3, 2018.
+Description: A set of data.frames containing parsed MetaCyc data. MetaCyc version 23.0. (downloaded May 30, 2019).
 Depends: R (>= 3.3.1)
-License: PNNL internal use only
+License: 
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0
